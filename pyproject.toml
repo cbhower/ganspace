@@ -1,0 +1,41 @@
+[project]
+name = "ganspace"
+version = "0.1.0"
+description = "Discovering Interpretable GAN Controls"
+authors = [
+    {name = "Erik Härkönen", email = "erik.harkonen@aalto.fi"},
+]
+readme = "README.md"
+requires-python = ">=3.7,<3.12"
+dependencies = [
+    "torch>=1.3.0",
+    "torchvision",
+    "pillow>=6.2",
+    "tqdm",
+    "scipy",
+    "scikit-learn",
+    "scikit-image", 
+    "boto3",
+    "requests",
+    "nltk",
+    "fbpca",
+    "numpy",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+interactive = [
+    "pyopengltk",
+    # "glumpy",  # Has build issues, skip for now
+    # "pycuda",  # Requires CUDA setup
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "jupyter",
+    "notebook",
+]
